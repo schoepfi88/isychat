@@ -1,0 +1,29 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$light-light-blue : #81DAF5;
+$blue   : #3465A4;
+$light-blue : #5882FA;
+$purple: #6A0888;
+.header-login {
+	text-align: center;
+}
+
+h1 {
+	color: white;
+}
+
+#user-icon {
+	width: 9px;
+}
+
+.jumbotron {
+	background-color: $purple;
+	margin-bottom: 0px;
+	height: 97vh;
+	color: white;
+}
+
+#login-body { 
+    overflow: hidden;
+}
