@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
 gem "therubyracer"
 gem "less-rails"
+gem 'certified'
 #super cool icons
 gem "font-awesome-rails"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -32,7 +33,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'certified'
 
 group :production do
     # Use unicorn as the app server
