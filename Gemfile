@@ -32,12 +32,34 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+
+group :production do
+    # Use unicorn as the app server
+    gem 'unicorn'
+
+    # mail exception notification, if something goes wrong, not yet configured
+    gem 'exception_notification'
+
+    # heroku open needs this gem
+    gem 'launchy'
+
+    gem 'rails_12factor'
+end
+
 group :development, :test do
-	# developer console rails
+    # Use Capistrano for deployment (app Server)
+    gem 'capistrano'
+
+    gem 'netrc'
+
+    # developer console rails
     gem 'rb-readline'
 
     #javascript linter (syntax checker)
     gem 'jshint_on_rails'
+
+    # cool way to test json api's format
+    gem 'assert_json'
 end
 
 # Use ActiveModel has_secure_password
