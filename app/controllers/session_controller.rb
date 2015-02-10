@@ -1,8 +1,8 @@
 class SessionController < ApplicationController
   	def index
-  		@cur = current_user.name
-  		puts current_user.name
-  		puts "test"
+      if current_user != nil
+  		  @cur = current_user.name
+      end
   	end
 
   	def create
