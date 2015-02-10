@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  get 'session/index'
   get 'users/index'
-
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :users
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+
+  match 'auth/login/callback', to: 'session#create', via: [:post]
+  match 'auth/fail', to: 'session#destroy', via: [:get]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
