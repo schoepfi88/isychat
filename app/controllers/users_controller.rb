@@ -7,6 +7,8 @@ class UsersController < ProtectedController
 
   def create
   	u = User.create(user_params)
+    puts user_params
+    puts "test"
   	u.save!
   	redirect_to welcome_index_path
   end
