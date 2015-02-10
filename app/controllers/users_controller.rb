@@ -1,4 +1,5 @@
 class UsersController < ProtectedController
+  before_filter :check_if_loggedin, :except=>[:new, :create]
   def index
   end
 
