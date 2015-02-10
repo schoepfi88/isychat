@@ -1,5 +1,5 @@
 class ProtectedController < ApplicationController
-	before_action :check_if_loggedin
+	before_action :check_if_loggedin, :except=>[:new, :create]
 
     def check_if_loggedin
     	if request.env['PATH_INFO'] != "/" && request.env['PATH_INFO'] != "/users/new" && request.env['PATH_INFO'] != "/users"

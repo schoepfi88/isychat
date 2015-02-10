@@ -1,4 +1,5 @@
 class SessionController < ApplicationController
+  skip_before_filter :check_if_loggedin, only: [:new, :create]
   	def index
       if current_user != nil
   		  @cur = current_user.name
