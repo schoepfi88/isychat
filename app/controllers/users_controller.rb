@@ -1,5 +1,4 @@
-class UsersController < ProtectedController
-  skip_before_filter :check_if_loggedin, only: [:new, :create]
+class UsersController < ApplicationController
   def index
   end
 
