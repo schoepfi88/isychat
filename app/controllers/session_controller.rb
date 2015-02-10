@@ -14,7 +14,7 @@ class SessionController < ApplicationController
 	  		if session_params[:password] != user.password
 	  			redirect_to auth_fail_path, alert: "Wrong password"
 	  		else
-	  			redirect_to session_index_path
+	  			redirect_to welcome_dash_path
 	  		end
 	  	else
 	  		redirect_to welcome_index_path, notice: "Invalid Username"
