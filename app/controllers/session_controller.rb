@@ -25,7 +25,7 @@ class SessionController < ApplicationController
   	def destroy
       session[:user_id] = nil
       session[:token] = nil
-      redirect_to root_url
+      redirect_to root_url, notice: "Successfully logged out"
     end
 
   	private

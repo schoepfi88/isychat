@@ -1,4 +1,4 @@
-<body id="login-body">
+<body id="sign-up-body">
 	<div class="row">
 		<div class="col col-lg-4 col-lg-offset-4 
 		col-md-4 col-md-offset-4
@@ -20,19 +20,22 @@
 					</div>
 					</br>
 					<div class="input-group">
+						<!-- TODO onChange="checkPasswordMatch();" -->
 			  			<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 			  			<%= f.text_field :password, :class => "form-control", :type => "password", :placeholder => "Repeat Password" %>
 					</div>
 					</br>
+					<div class="notice-inval"><%= alert %></div>
 					<div class="input-group">
 			  			<span class="input-group-addon"><i class="fa fa-envelope" id="mail-icon"></i></span>
 			  			<%= f.text_field :email, :class => "form-control", :placeholder => "E-Mail" %>
 					</div>
 					</br>
 					</br>
+					
 					<div class="row">
 						<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6">
-							<%= button_to "Back", welcome_index_path, :class => "btn btn-primary" %>
+							<a href="/welcome/index"><div class="btn btn-primary">back</div></a>
 						</div>
 						<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6">
 	    					<%= f.submit "Sign Up", :class => 'btn btn-primary pull-right' %>
